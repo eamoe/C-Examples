@@ -1,5 +1,6 @@
 ﻿//directive. Says to the compiler that the program uses the System namespace.
 //Namespace is a grouping of related code elements: classes, structures, enums, etc.
+//We can declare a namespace ourselves. It prevents naming conflicts.
 using System;
 using System.Collections.Generic;
 using System.Linq;
