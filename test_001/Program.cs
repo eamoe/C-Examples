@@ -16,8 +16,27 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            int x = (int) 20.5;
-            Console.WriteLine(x);
+            //Casting
+            //int x = (int) 20.5;
+
+            // Arrays
+            //int[] userAge = {21, 22, 23, 24, 25};
+            int [] userAge = new int[5];
+            userAge = new [] {21, 22, 23, 24, 25};
+
+            //Methods
+            int [] source = {12, 1, 5, -2, 16, 14};
+            int [] dest = {1, 2, 3, 4};
+            
+            Array.Copy(source, dest, 3);
+            
+            Array.Sort(source);
+
+            Console.WriteLine(Array.IndexOf(source, 25));
+
+            for (int i = 0; i < source.Length; i++){
+                Console.WriteLine(source[i]);
+            }
         }
     }
 }
