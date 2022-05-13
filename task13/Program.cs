@@ -3,8 +3,6 @@
 78 -> третьей цифры нет
 32679 -> 6 */
 
-//int randomNumber = new Random().Next(1, 100000);
-
 int randomNumber = -14172;
 
 //Adopting negative numbers
