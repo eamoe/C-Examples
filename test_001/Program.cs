@@ -30,10 +30,38 @@ namespace HelloWorld
             
             Array.Copy(source, dest, 3);
 
-            Console.WriteLine(Array.IndexOf(source, 25));
+            //Console.WriteLine(Array.IndexOf(source, 25));
 
-            for (int i = 0; i < source.Length; i++){
-                Console.WriteLine(source[i]);
+            for (int i = 0; i < source.Length; i++)
+            {
+                //Console.WriteLine(source[i]);
+            }
+
+            //Strings
+            string message = "Hello World";
+            string anotherMessage = "";
+
+            //concatenation 
+            string myName = "Hello World, " + "my name is Eugene";
+
+            //substring
+            string newMessage = message.Substring(2, 5);
+
+            //equals
+            string firstString = "This is Eugene";
+            string secondString = "Hello";
+            //Console.WriteLine(firstString.Equals("This is Eugene"));
+            //Console.WriteLine(firstString.Equals(secondString));
+
+            //split
+            //Suppose you want to split the string "Peter, John; Andy, , David" into substrings
+            string [] separator = {", ", "; "};
+            string names = "Peter, John; Andy, , David";
+            string [] substrings = names.Split(separator, StringSplitOptions.None);
+
+            for (int i = 0; i < substrings.Length; i++)
+            {
+                Console.WriteLine(substrings[i]);
             }
         }
     }
