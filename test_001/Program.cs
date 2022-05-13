@@ -29,8 +29,6 @@ namespace HelloWorld
             int [] dest = {1, 2, 3, 4};
             
             Array.Copy(source, dest, 3);
-            
-            Array.Sort(source);
 
             Console.WriteLine(Array.IndexOf(source, 25));
 
