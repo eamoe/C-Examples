@@ -61,7 +61,19 @@ namespace HelloWorld
 
             for (int i = 0; i < substrings.Length; i++)
             {
-                Console.WriteLine(substrings[i]);
+                //Console.WriteLine(substrings[i]);
+            }
+
+            //Lists
+            List<int> userAgeList = new List<int>();
+
+            List<int> newUserAgeList = new List<int> {11, 21, 31, 41};
+            
+            newUserAgeList.Add(100);
+
+            for(int i = 0; i < newUserAgeList.Count; i++)
+            {
+                Console.Write($"{newUserAgeList[i]} ");
             }
         }
     }
