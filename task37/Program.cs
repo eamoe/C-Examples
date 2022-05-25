@@ -60,6 +60,6 @@ printArray(array);
 
 int [] summedArray = sumPairs(array);
 
-Console.Write("\nПросуммированный массив: ");
+Console.Write("\nПроизведение пар элементов массива: ");
 
 printArray(summedArray);
