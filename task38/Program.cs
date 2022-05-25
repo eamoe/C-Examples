@@ -17,27 +17,27 @@ void printArray(double [] arr)
 {
     for(int i = 0; i < arr.Length; i++)
     {
-        Console.Write("{0:F5} ", arr[i]);
+        Console.Write("{0:F2} ", arr[i]);
     }
 }
 
-double getMinMax(double [] array, Boolean isMax = true)
-{
-    double [] copy = new double [array.Length];
-
-    Array.Copy(array, copy, array.Length);
-    
-    double result = 0;
-
-    Array.Sort(copy);
+double findMinMax(double [] array, Boolean isMax)
+{    
+    double result = array[0];
 
     if (isMax == true)
     {
-        result = copy[array.Length - 1];
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (result < array[i]) result = array[i];
+        }
     }
     else
     {
-        result = copy[0];
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (result > array[i]) result = array[i];
+        }
     }
 
     return result;
@@ -49,4 +49,7 @@ Console.Write("Сгенерированный массив: ");
 
 printArray(array);
 
-Console.Write("\nРазница между максимальным и минимальным значением равна: {0:F5}", getMinMax(array) - getMinMax(array, false));
+double min = findMinMax(array, false);
+double max = findMinMax(array, true);
+
+Console.Write("\nРазница между максимальным и минимальным значением равна: {0:F2}", max - min);
