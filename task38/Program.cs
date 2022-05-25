@@ -21,23 +21,15 @@ void printArray(double [] arr)
     }
 }
 
-double findMinMax(double [] array, Boolean isMax)
+double findMinMax(double [] array, Boolean _isMax)
 {    
     double result = array[0];
 
-    if (isMax == true)
+    for (int i = 0; i < array.Length; i++)
     {
-        for (int i = 0; i < array.Length; i++)
-        {
-            if (result < array[i]) result = array[i];
-        }
-    }
-    else
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            if (result > array[i]) result = array[i];
-        }
+        if (result < array[i] && _isMax == true) result = array[i];
+
+        if (result > array[i] && _isMax == false) result = array[i];
     }
 
     return result;
